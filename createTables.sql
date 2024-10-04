@@ -17,15 +17,15 @@ CREATE TABLE Games (
   game_title VARCHAR(64),
   genre_id INT,
   platform_id INT,
-  release_year DATE,
-  rental_price DECIMAL,
+  release_year YEAR,
+  rental_price FLOAT,
   available_units INT
 );
 
 CREATE TABLE Consoles (
   console_id INT PRIMARY KEY,
   console_name VARCHAR(64),
-  rental_price_per_day DECIMAL,
+  rental_price_per_day FLOAT,
   available_units INT
 );
 
@@ -58,7 +58,7 @@ CREATE TABLE Statuses (
 CREATE TABLE Transactions (
   transaction_id INT PRIMARY KEY,
   rental_id INT,
-  amount_paid DECIMAL NULL,
+  amount_paid FLOAT NULL,
   date_paid DATE NULL,
   payment_method_id INT NULL,
   status_id INT
